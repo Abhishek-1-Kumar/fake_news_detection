@@ -3,7 +3,7 @@ from transformers import BertForSequenceClassification, BertTokenizer
 import torch
 import numpy as np
 
-model_path = "shi13u/bert_fake_news_detector"
+model_path = "shi13u/fake_news_detection_bert"
 
 # Load model and tokenizer from Hugging Face Hub
 model = BertForSequenceClassification.from_pretrained(model_path)
