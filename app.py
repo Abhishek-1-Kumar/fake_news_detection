@@ -3,10 +3,14 @@ import torch
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
+import os
+HF_TOKEN = os.getenv("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")
+
+
 MODEL_NAME = "shi13u/fake_news_detection_bert"  
 
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME,token=HF_TOKEN)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME,token=HF_TOKEN)
 
 model.eval()
 
