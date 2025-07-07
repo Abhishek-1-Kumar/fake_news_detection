@@ -1,13 +1,13 @@
 import streamlit as st
-from transformers import BertForSequenceClassification, BertTokenizer
 import torch
 import numpy as np
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-model_path = "shi13u/fake_news_detection_bert"
+MODEL_NAME = "shi13u/fake_news_detection_bert"  
 
-# Load model and tokenizer from Hugging Face Hub
-model = BertForSequenceClassification.from_pretrained(model_path)
-tokenizer = BertTokenizer.from_pretrained(model_path)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+
 model.eval()
 
 # Streamlit page settings
