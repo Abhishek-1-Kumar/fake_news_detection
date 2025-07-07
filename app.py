@@ -3,8 +3,9 @@ from transformers import BertForSequenceClassification, BertTokenizer
 import torch
 import numpy as np
 
-# Load model and tokenizer from Google Drive (after downloading or syncing)
-model_path = "bert_fake_news_model"  # or full Drive path if running locally
+model_path = "shi13u/bert_fake_news_detector"
+
+# Load model and tokenizer from Hugging Face Hub
 model = BertForSequenceClassification.from_pretrained(model_path)
 tokenizer = BertTokenizer.from_pretrained(model_path)
 model.eval()
