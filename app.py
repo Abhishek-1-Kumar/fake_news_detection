@@ -4,7 +4,7 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 import os
-HF_TOKEN = os.getenv("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")
+HF_TOKEN = os.getenv("HF_TOKEN")
 
 
 MODEL_NAME = "shi13u/fake_news_detection_bert"  
